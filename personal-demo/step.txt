@@ -17,8 +17,8 @@
         babel-loader //
         babel-preset-env  // 解析ES6语法
         babel-preset-react  // 解析JSX
-        babel-preset-es2015
         babel-preset-stage-0  //解析箭头函数
+        babel-plugin-transform-runtime  解析generator函数 如async  awit ...
 
 6. 安装react依赖
     react
@@ -32,3 +32,8 @@
 8. 安装antd，  babel-plugin-import //按需加载
 
 9. 安装react-hot-loader   //局部热加载
+
+10. 封装axios, 配置proxy反向代理请求
+
+11. 安装redux，react-redux 状态管理
+

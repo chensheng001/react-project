@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import './login.less'
+import './login.less';
+import LoginService from "../../shared/login/LoginService";
 
-class Login extends Component {
+class WrappedNormalLoginForm extends Component {
 
   constructor(props) {
     super(props);
@@ -13,7 +14,13 @@ class Login extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log(values);
+        const account = {
+          accountName: values.username,
+          password: values.password,
+        };
+        LoginService.loginValidate(account, result => {
+          this.props.history.push('/home');
+        });
       }
     });
   };
@@ -65,6 +72,6 @@ class Login extends Component {
   }
 }
 
-const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(Login);
+const Login = Form.create({ name: 'normal_login' })(WrappedNormalLoginForm);
 
-export default WrappedNormalLoginForm;
+export default Login;
