@@ -1,4 +1,4 @@
-使用技术总结：
+## 技术栈：
     1.webpack打包 (webpack-dev-server构建本地服务器，实现热加载)
     2.react,react-dom
     3.react-redux 状态管理器
@@ -11,3 +11,6 @@
     10.less 预处理
     11.ES6
     12.cookies封装	
+## 演示
+
+[链接地址](https://www.baidu.com)
