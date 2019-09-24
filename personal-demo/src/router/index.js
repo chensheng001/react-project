@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HashRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import {hot} from 'react-hot-loader/root';
 import Login from "../pages/login/Login";
 import App from "../App";

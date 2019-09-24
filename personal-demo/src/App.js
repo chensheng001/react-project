@@ -4,8 +4,11 @@ const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 import {Route, Link} from "react-router-dom";
 import Home from "./pages/home/Home";
-import Production from "./pages/production/Production";
 import cookie from "./utils/cookes";
+import asyncComponent from "./utils/asyncComponent";
+
+// 组件懒加载
+const Production = asyncComponent(() => import('./pages/production/Production'));
 
 class App extends Component {
   constructor(props) {

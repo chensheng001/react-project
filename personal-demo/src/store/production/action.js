@@ -10,8 +10,6 @@ export const getProData = (currentPage) => {
       qobj.limit = 10;
       qobj.start = qobj.limit * (currentPage - 1);
       const result = await ProductionService.query(qobj);
-      console.log(result)
-      //const result = await function(){return [1,2,3]}();
       dispatch({
         type: pro.GETLIST,
         dataList: result

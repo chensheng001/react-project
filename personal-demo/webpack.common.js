@@ -69,7 +69,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     //以该文件下的本地index.html作为模板,打包的时候自动生成服务器html并自动引入打包的js文件
     new HtmlWebpackPlugin({
-      template: __dirname + "/public/index.html"//new 一个这个插件的实例，并传入相关的参数
+      template: __dirname + "/public/index.html" //new 一个这个插件的实例，并传入相关的参数
+      //favicon: __dirname +'/src/assets/imgs/favicon.png'
     }),
   ],
   resolve: {
