@@ -5,10 +5,10 @@
     3.react-redux(v7.1.1) 状态管理器
     4.react-hot-loader (4.12.13)  实现react组件局部热更新
     5.react 组件懒加载
-    6.react-router-dome(v5.0.1) 路由
-    7.axios封装 http请求
+    6.react-router-dom(v5.0.1) 实现路由
+    7.axios封装 做http请求
     8.antd UI框架
-    9.less 预处理
+    9.less css预处理
     10.ES6 语法
     11.cookies封装，验证http请求	
 ## 演示
