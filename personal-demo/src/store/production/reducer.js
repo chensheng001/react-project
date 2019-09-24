@@ -1,7 +1,15 @@
 import * as production from './action-type';
+import * as pro from './action-type';
 
 let defaultState = {
-  list: []
+  dataList: []
 };
 
-export
+export const proData = (state = defaultState, action) => {
+  switch (action.type) {
+    case pro.GETLIST:
+      return {...state, ...action};
+    default:
+      return state;
+  }
+};

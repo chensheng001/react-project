@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {HashRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom';
-import Home from "../pages/home/Home";
-import Production from "../pages/production/Production";
 import {hot} from 'react-hot-loader/root';
 import Login from "../pages/login/Login";
+import App from "../App";
+import Page404 from "../components/Page404";
 
 class RouteConfig extends Component {
   render() {
@@ -11,10 +11,11 @@ class RouteConfig extends Component {
       <div>
         <Router>
           <Switch>
-            <Route path='/home' component={Home} />
-            <Route path='/production' component={Production} />
             <Route path='/login' component={Login} />
-            <Redirect to='/home' />
+            <Route path='/myView' component={App} />
+            <Route path='/' exact component={Login} />
+            <Route path='/404' component={Page404} />
+            <Redirect to='/404' />
           </Switch>
         </Router>
       </div>

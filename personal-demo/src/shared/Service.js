@@ -1,9 +1,21 @@
 import axios from 'axios';
 import envconfig from "../envconfig/envconfig";
 import {message} from 'antd';
+import cookie from "../utils/cookes";
 
 const firstItem = (obj)=> {
   return obj[Object.keys(obj)[0]];
+};
+
+export class SessionInventory {
+  uuid: string;
+  accountUuid: string;
+  userUuid: string;
+  type: string;
+}
+
+const toLogin = () => {
+  window.location.href = '/#/login';
 };
 
 //axios实例化
@@ -33,6 +45,7 @@ Service.interceptors.response.use(response => {
         if (reply.error) {
           if (reply.error.code === 'ID.1001') {
             message.error('ID.1001');
+            window.location.href='/#/login';
           }else if (reply.error.code === 'ID.1002') {
             message.error('ID.1002');
           }else {
@@ -52,10 +65,16 @@ Service.interceptors.response.use(response => {
 
 export default class ApiService {
   call(msg) {
-    msg.session = {
-      /*uuid: "163ec9f88b4e4210a6b1cadf814f3210"*/
-    };
-    const path = '/account/api';
+    const session: SessionInventory = new SessionInventory();
+    session.uuid = cookie.getCookie('sessionid');
+    if (!msg.session) {
+      msg.session = new SessionInventory();
+      msg.session.uuid = session.uuid;
+    }
+    if (!session.uuid) {
+      toLogin();
+    }
+    const path = '/' + msg.flag + '/api';
     return Service({
       url: path,
       data: msg.toApiMap(),

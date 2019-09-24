@@ -16,6 +16,10 @@ module.exports = merge(common, {
       '/account/api': {
         target: 'http://192.168.211.72',
         secure: false, // 接受 运行在 https 上的服务
+      },
+      '/sdwan/api': {
+        target: 'http://192.168.211.72',
+        secure: false, // 接受 运行在 https 上的服务
       }
     }
   }
