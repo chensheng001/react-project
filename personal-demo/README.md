@@ -14,8 +14,13 @@
 ## 演示
 
 [链接地址](https://www.baidu.com)
-
-## 项目搭建
+    
+## 项目运行
+    安装： npm install
+    启动：  npm start
+    构建：  npm run build
+    
+## 项目从零搭建
     基于webpack的react项目创建步骤
 
     1. npm init //生成package.json文件
@@ -53,8 +58,3 @@
     10. 封装axios, 配置proxy反向代理请求
 
     11. 安装redux，react-redux 状态管理
-    
-## 项目运行
-    安装： npm install
-    启动：  npm start
-    构建：  npm run build
