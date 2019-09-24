@@ -15,7 +15,7 @@
 
 [链接地址](https://www.baidu.com)
 
-## 项目创建
+## 项目搭建
     基于webpack的react项目创建步骤
 
     1. npm init //生成package.json文件
