@@ -16,7 +16,7 @@
 [链接地址](https://www.baidu.com)
     
 ## 项目运行
-    安装： npm install
+    安装：  npm install 或者yarn
     启动：  npm start
     构建：  npm run build
     
