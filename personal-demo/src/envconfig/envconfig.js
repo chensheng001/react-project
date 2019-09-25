@@ -4,9 +4,9 @@
 let baseURL; 
 
 if(process.env.NODE_ENV === 'development'){
-  baseURL = '//192.168.211.72';
+  baseURL = 'http://192.168.211.71';
 }else{
-  baseURL = '//192.168.211.72';
+  baseURL = 'http://192.168.211.72';
 }
 
 

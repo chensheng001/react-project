@@ -1,8 +1,21 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const webpack = require('webpack');
+const InterpolateHtmlPlugin = require('interpolate-html-plugin');
 
 module.exports = merge(common, {
   mode: 'development',
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"',
+      }
+    }),
+    new InterpolateHtmlPlugin({
+      NODE_ENV:'"development"',
+      PUBLIC_URL:''
+    }),
+  ],
   //构建本地服务器
   devServer: {
     contentBase: "./public",//本地服务器所加载的页面所在的目录

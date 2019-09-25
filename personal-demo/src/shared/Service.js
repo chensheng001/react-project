@@ -45,7 +45,7 @@ Service.interceptors.response.use(response => {
         if (reply.error) {
           if (reply.error.code === 'ID.1001') {
             message.error('ID.1001');
-            window.location.href='/#/login';
+            toLogin();
           }else if (reply.error.code === 'ID.1002') {
             message.error('ID.1002');
           }else {
@@ -66,17 +66,12 @@ Service.interceptors.response.use(response => {
 export default class ApiService {
   call(msg) {
     const session: SessionInventory = new SessionInventory();
-    session.uuid = cookie.getCookie('sessionid');
-    if (!msg.session) {
-      msg.session = new SessionInventory();
-      msg.session.uuid = session.uuid;
+    if(!!cookie.getCookie('sessionid')){
+      session.uuid = cookie.getCookie('sessionid');
     }
-    if (!session.uuid) {
-      toLogin();
-    }
-    const path = '/' + msg.flag + '/api';
+    msg.session = msg.isLogin ? {} :session;
     return Service({
-      url: path,
+      url: msg.path,
       data: msg.toApiMap(),
       method: msg.method || 'post'
     })

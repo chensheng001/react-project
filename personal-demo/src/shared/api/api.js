@@ -45,7 +45,7 @@ export class QueryObject {
 }
 
 export class APILogInByAccountMsg extends APIMessage{
-  flag = 'account';
+  path = '/account/api';
   accountName: string;
   imageUuid: string;
   imageCode: string;
@@ -59,7 +59,7 @@ export class APILogInByAccountMsg extends APIMessage{
 }
 
 export class APIGetImageCodeMsg extends APIMessage{
-  flag = 'account';
+  path = '/account/api';
   toApiMap(): any {
     var msg = {
       'com.syscxp.sms.header.APIGetImageCodeMsg': this
@@ -69,7 +69,7 @@ export class APIGetImageCodeMsg extends APIMessage{
 }
 
 export class APIQueryCeMsg extends APIQueryMsg{
-  flag = 'sdwan';
+  path = '/sdwan/api';
   toApiMap(): any {
     var msg = {
       'com.syscxp.header.sdwan.ce.APIQueryCeMsg': this
