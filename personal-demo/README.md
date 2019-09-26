@@ -12,8 +12,9 @@
     10.ES6 语法
     11.cookies封装，验证http请求	
 ## 演示
-> 用户名输入admin，密码随意
+
 [链接地址](http://49.234.3.245/myapp/#/login)
+用户名输入admin，密码随意
     
 ## 项目运行
     安装：  npm install 或者yarn
