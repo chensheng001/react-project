@@ -1,5 +1,5 @@
 ## 技术栈：
-    1.webpack打包 (webpack-dev-server构建本地服务器，实现热加载, 设置proxy 跨域请求代理)
+    1.babel编译JSX，webpack打包 (webpack-dev-server构建本地服务器，实现热加载, 设置proxy 跨域请求代理)
     2.  react (v16.9.0)
         react-dom
     3.react-redux(v7.1.1) 状态管理器
