@@ -13,7 +13,7 @@
     11.cookies封装，验证http请求	
 ## 演示
 
-[链接地址](https://www.baidu.com)
+[链接地址](http://49.234.3.245/myapp/#/login)
     
 ## 项目运行
     安装：  npm install 或者yarn
