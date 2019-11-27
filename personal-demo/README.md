@@ -15,6 +15,9 @@
 
 [链接地址](http://49.234.3.245/myapp/#/login)
 (用户名输入admin，密码随意)
+
+##效果图
+![image](https://github.com/chensheng001/react-project/edit/master/personal-demo/imgs/login.png)
     
 ## 项目运行
     安装：  npm install 或者yarn
