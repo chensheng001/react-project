@@ -18,6 +18,8 @@
 
 ##效果图
 ![image](http://www.haowen108.com/haowen_imgs/personal/login.png)
+![image](http://www.haowen108.com/haowen_imgs/personal/home.png)
+![image](http://www.haowen108.com/haowen_imgs/personal/table.png)
     
 ## 项目运行
     安装：  npm install 或者yarn
