@@ -18,6 +18,7 @@
 
 ##效果图
 ![image](https://github.com/chensheng001/react-project/edit/master/personal-demo/imgs/login.png)
+![image](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png)
     
 ## 项目运行
     安装：  npm install 或者yarn
